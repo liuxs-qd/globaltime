@@ -156,7 +156,7 @@ class GTView extends SurfaceView implements SurfaceHolder.Callback {
     private boolean mDisplayAtmosphere = true;
     private boolean mDisplayClock = false;
     private boolean mClockShowing = false;
-    private boolean mDisplayLights = false;
+    private boolean mDisplayLights = true;
     private boolean mDisplayWorld = true;
     private boolean mDisplayWorldFlat = false;
     private boolean mSmoothShading = true;
@@ -790,7 +790,7 @@ class GTView extends SurfaceView implements SurfaceHolder.Callback {
                         case 5:
                         	Intent webIntent = new Intent( 
                         			Intent.ACTION_VIEW,
-                        			Uri.parse("http://www.google.com/search?q=" + mCities.get(mCityIndex).getName())); 
+                        			Uri.parse("http://cn.bing.com/search?q=" + mCities.get(mCityIndex).getName())); 
                         	getContext().startActivity(webIntent);
                         	((Activity) mActivity).finish();
                         	return true;
@@ -1459,9 +1459,7 @@ class GTView extends SurfaceView implements SurfaceHolder.Callback {
         } else {
             mGLView.setProjection(gl);
             mGLView.setView(gl);
-        }
 
-        if (!mDisplayWorldFlat) {
             if (mFlyToCity) {
                 float lerp = (now - mCityFlyStartTime)/mCityFlightTime;
                 if (lerp >= 1.0f) {

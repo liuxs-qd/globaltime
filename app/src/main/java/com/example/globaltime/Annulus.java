@@ -29,7 +29,6 @@ public class Annulus extends Shape {
     /**
      * Constructs an annulus.
      * 
-     * @param centerX the X coordinate of the center point
      * @param centerY the Y coordinate of the center point
      * @param Z the fixed Z for the entire ring
      * @param innerRadius the inner radius
@@ -54,9 +53,9 @@ public class Annulus extends Shape {
 
         int radii = sectors + 1;
 
-        int[] vertices = new int[2 * 3 * radii];
-        int[] colors = new int[2 * 4 * radii];
-        short[] indices = new short[2 * 3 * radii];
+        int[] vertices = new int[2 * 3 * radii];  // vertice coordinate
+        int[] colors = new int[2 * 4 * radii];    // vertice collor
+        short[] indices = new short[2 * 3 * radii]; // vertice indice for each triangle
 
         int vidx = 0;
         int cidx = 0;

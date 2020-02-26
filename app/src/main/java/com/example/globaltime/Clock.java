@@ -437,7 +437,7 @@ public class Clock {
     public void drawButton(Canvas canvas,
                            int w, int h, boolean showV, boolean showH, Bitmap bm 
                             ) {
-        float radius = 60.45f;//  * Math.abs(w - h);
+        float radius = 160.45f;//  * Math.abs(w - h);
         int bradius = (int)radius/3;
         int aradius = (int)radius/2;
         int iradius = (int)bradius+2;
